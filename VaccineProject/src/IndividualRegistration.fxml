@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxWidth="-Infinity" minWidth="-Infinity" prefHeight="482.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="IndividualRegistrationController">
+   <children>
+      <ImageView fitHeight="161.0" fitWidth="186.0" layoutX="640.0" layoutY="-27.0" pickOnBounds="true">
+         <image>
+            <Image url="@TransparentLogo.png" />
+         </image>
+      </ImageView>
+      <ImageView blendMode="MULTIPLY" fitHeight="482.0" fitWidth="800.0" pickOnBounds="true">
+         <image>
+            <Image url="@background_image.png" />
+         </image>
+      </ImageView>
+      <GridPane layoutX="10.0" prefHeight="455.0" prefWidth="800.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="228.0" minWidth="50.0" prefWidth="65.0" />
+            <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="228.0" minWidth="200.0" prefWidth="228.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="463.0" minWidth="24.0" prefWidth="31.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="463.0" minWidth="200.0" prefWidth="215.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="463.0" minWidth="14.0" prefWidth="27.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="445.0" minWidth="187.0" prefWidth="187.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="445.0" minWidth="50.0" prefWidth="50.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="154.0" minHeight="10.0" prefHeight="107.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="137.0" minHeight="4.0" prefHeight="23.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="136.0" minHeight="10.0" prefHeight="33.0" valignment="TOP" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="145.0" minHeight="5.0" prefHeight="20.0" valignment="TOP" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="160.0" minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="159.0" minHeight="0.0" prefHeight="20.0" valignment="TOP" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="198.0" minHeight="10.0" prefHeight="29.0" valignment="TOP" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="206.0" minHeight="7.0" prefHeight="17.0" valignment="TOP" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="235.0" minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="241.0" minHeight="10.0" prefHeight="19.0" valignment="TOP" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="261.0" minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="272.0" minHeight="10.0" prefHeight="127.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="First Name:" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="first_name_text_field" prefHeight="26.0" prefWidth="152.0" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.valignment="TOP" />
+            <ComboBox fx:id="mask_combo_box" prefHeight="26.0" prefWidth="209.0" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+            <Label text="Mask Preferences" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+            <Label text="Security Questions #1" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+            <TextField fx:id="security_question1_text_field" prefHeight="26.0" prefWidth="163.0" promptText="Mothers Maiden Name" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+            <Label text="Security Questions #2" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+            <TextField fx:id="security_question2_text_field" prefHeight="26.0" prefWidth="163.0" promptText="First car make" GridPane.columnIndex="5" GridPane.rowIndex="8" />
+            <TextField fx:id="ssn_text_field" prefHeight="26.0" prefWidth="155.0" promptText="####" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <Label text="Last-4 of SSN" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <ComboBox fx:id="vaccine_combo_box" prefHeight="26.0" prefWidth="218.0" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+            <Label text="Vaccination Status" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+            <Label text="Vaccination Lot #1" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+            <TextField fx:id="vaccination_lot1_text_field" prefHeight="26.0" prefWidth="155.0" promptText="If Vaccinated" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+            <Label text="Vaccination Lot #2" GridPane.columnIndex="3" GridPane.rowIndex="9" />
+            <TextField fx:id="vaccination_lot2_text_field" prefHeight="26.0" prefWidth="155.0" promptText="(optional)" GridPane.columnIndex="3" GridPane.rowIndex="10" />
+            <Label text="Booster Lot #" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <TextField fx:id="booster_text_field" prefHeight="26.0" prefWidth="155.0" promptText="(optional)" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+            <Button fx:id="individualRegisteredButton" mnemonicParsing="false" onAction="#registerNewIndividual" prefHeight="26.0" prefWidth="251.0" text="Register and Return Home" GridPane.columnIndex="3" GridPane.rowIndex="11" />
+            <TextField fx:id="dob_text_field" prefHeight="26.0" prefWidth="170.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Label prefHeight="16.0" prefWidth="114.0" text="DOB (DD/MM/YY)" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Label text="Password" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <TextField fx:id="username_text_field" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Label text="Username" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="last_name_text_field" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label text="Last Name" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label prefHeight="43.0" prefWidth="307.0" text="Individual Registration" GridPane.columnIndex="2" GridPane.columnSpan="4">
+               <font>
+                  <Font name="Manjari Regular" size="30.0" />
+               </font>
+            </Label>
+            <Label text="Last Vaccination Date" GridPane.columnIndex="5" GridPane.rowIndex="9" />
+            <ComboBox fx:id="last_vaccination_date_combo_box" prefHeight="26.0" prefWidth="203.0" GridPane.columnIndex="5" GridPane.rowIndex="10" />
+            <Label fx:id="registration_failed_label" text="Registration Failed" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="11" GridPane.valignment="BOTTOM" />
+            <PasswordField fx:id="password_password_field" onKeyTyped="#passwordStrengthTester" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <PasswordField fx:id="reentered_password_password_field" onKeyTyped="#passwordReenteredMatches" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+            <Label fx:id="reenter_password_label" prefHeight="16.0" prefWidth="221.0" text="Reenter Password: Matches" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <Label fx:id="password_strength_label_text" prefHeight="16.0" prefWidth="190.0" text="Password Strength: Poor" GridPane.columnIndex="1" GridPane.rowIndex="11" GridPane.valignment="TOP" />
+            <Label fx:id="password_strength_label" prefHeight="16.0" prefWidth="19.0" textFill="RED" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="11" GridPane.valignment="TOP" />
+            <Label fx:id="password_reqs_label" prefHeight="91.0" prefWidth="193.0" text="Password Requirements: At least 6 Chars Long, no longer than 15 Chars, 1 special character, one uppercase letter" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+            <Button fx:id="exit_button" mnemonicParsing="false" onAction="#exitRegistration" text="Cancel Registration" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="11" GridPane.valignment="CENTER" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
